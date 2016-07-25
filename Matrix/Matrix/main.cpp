@@ -34,8 +34,8 @@ int main()
     double sin_int = SinIntegral(0.0,M_PI,1000);
     std::cout << "Integral value using riemman = " << sin_int << std::endl;
     
-    int z = 1;
-    Vector< Vector< int > > A;
+    std::complex<double> z = 1i* 1i;
+    Vector< Vector< std::complex<double> > > A;
     
     A = Matrix(10, 40, z);
     std::cout << "A = " << A << std::endl;
