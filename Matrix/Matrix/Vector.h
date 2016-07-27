@@ -50,7 +50,7 @@ public:
     // push a new element
     void push_back(const T& v);
     
-    // push a new element
+    // pop a new element
     void pop_back();
     
     void fill(const T& v, const long from=0, const long numelem=-1);
@@ -193,7 +193,7 @@ template< class T >
 void Vector<T>::resize(const long newsize,const T& object) {
 
     if(newsize<0) {
-        std::cout << "AHFEM" << std::endl;
+        std::cout << "trying to define the suitable range" << std::endl;
         return;
     }
 
@@ -226,7 +226,7 @@ template< class T >
 void Vector<T>::resize(const long newsize) {
 
     if(newsize<0) {
-        std::cout << "AHFEM" << std::endl;
+        std::cout << "trying to define the suitable range" << std::endl;
         return;
     }
     
@@ -301,33 +301,5 @@ std::ostream& operator<<( std::ostream& Out, const Vector< T >& v )
     Out << std::endl;
     return Out;
 }
-
-inline std::ostream& operator<<( std::ostream& Out, const Vector< std::pair<double,double> >& v )
-{
-    
-    Out << "{";
-    
-    long size = v.size();
-    
-    if(size > 0)
-    {
-        for( long ii = 0; ii < size; ii++ )
-        {
-            Out << "{" << v[ii].first << ',' << v[ii].second << "}";
-            if( ii < size-1) Out << ",";
-        }
-    }
-    
-    Out << "}";
-    return Out;
-}
-
-
-inline std::ostream &operator<<(std::ostream &out, const std::pair<int,int> &element)
-{
-    out << element.first << "|" << element.second;
-    return out;
-}
-
 
 #endif /* defined(____Vector__) */

@@ -5,6 +5,7 @@
 #include <complex>
 #include "RealVector.h"
 #include "Vector.h"
+#include "Tensor.h"
 
 
 double SinIntegral(double a, double b, int n){
@@ -23,30 +24,36 @@ double SinIntegral(double a, double b, int n){
     return integral.total();
 }
 
-template< class T >
-Vector< Vector<T> >  Matrix(long m, long n, const T & asshole);
 
+void IntegralMain(){
+    
+    double sin_int = SinIntegral(0.0,M_PI,1000);
+    std::cout << "Integral value using riemman = " << sin_int << std::endl;
+}
+
+void VectorMain(){
+    
+    int n = 10;
+    double z = 1.0;
+    Vector< double > v(n,z);
+    std::cout << v <<std::endl;
+
+}
 
 int main()
 {
     
+    Tensor< double > a(1,0,2.0);
+    Tensor< double > b(1,0,2.0);
     
-    double sin_int = SinIntegral(0.0,M_PI,1000);
-    std::cout << "Integral value using riemman = " << sin_int << std::endl;
-    
-    std::complex<double> z = 1i* 1i;
-    Vector< Vector< std::complex<double> > > A;
-    
-    A = Matrix(10, 40, z);
-    std::cout << "A = " << A << std::endl;
-    
-    return 0;
-}
+    Tensor< Tensor< double > > a_v(10,1,a);
+    Tensor< Tensor< double > > b_v(10,1,b);
 
-template< class T >
-Vector< Vector<T> >  Matrix(long m, long n, const T & asshole){
+    std::cout<< "rank = " << a_v.rank() << std::endl;
+    std::cout<< "inner = " << a*b << std::endl;
+    std::cout<< "inner = " << a_v*b_v << std::endl;
+
     
-    Vector<T> col(m,asshole);
-    Vector< Vector<T> > matrix(n,col);
-    return matrix;
+    int shit = 0;
+    return 0;
 }

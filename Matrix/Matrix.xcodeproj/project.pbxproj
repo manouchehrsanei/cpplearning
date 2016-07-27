@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CAFAF961D480B64001E401A /* Tensor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CAFAF941D480B64001E401A /* Tensor.cpp */; };
 		2CEEC9751D45BE57009EE9A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEC9741D45BE57009EE9A0 /* main.cpp */; };
 		2CEEC97F1D45BE9B009EE9A0 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEC97C1D45BE9B009EE9A0 /* Vector.cpp */; };
 		2CEEC9801D45BE9B009EE9A0 /* RealVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CEEC97D1D45BE9B009EE9A0 /* RealVector.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2CAFAF941D480B64001E401A /* Tensor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tensor.cpp; sourceTree = "<group>"; };
+		2CAFAF951D480B64001E401A /* Tensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tensor.h; sourceTree = "<group>"; };
 		2CEEC9711D45BE56009EE9A0 /* Matrix */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Matrix; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEEC9741D45BE57009EE9A0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2CEEC97B1D45BE9B009EE9A0 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 		2CEEC9731D45BE56009EE9A0 /* Matrix */ = {
 			isa = PBXGroup;
 			children = (
+				2CAFAF941D480B64001E401A /* Tensor.cpp */,
+				2CAFAF951D480B64001E401A /* Tensor.h */,
 				2CEEC9741D45BE57009EE9A0 /* main.cpp */,
 				2CEEC97B1D45BE9B009EE9A0 /* Vector.h */,
 				2CEEC97C1D45BE9B009EE9A0 /* Vector.cpp */,
@@ -130,6 +135,7 @@
 			files = (
 				2CEEC9801D45BE9B009EE9A0 /* RealVector.cpp in Sources */,
 				2CEEC97F1D45BE9B009EE9A0 /* Vector.cpp in Sources */,
+				2CAFAF961D480B64001E401A /* Tensor.cpp in Sources */,
 				2CEEC9751D45BE57009EE9A0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +253,7 @@
 				2CEEC97A1D45BE57009EE9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
